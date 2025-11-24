@@ -208,7 +208,7 @@ let products = [
     image: "/images/canon-dslr.jpg",
     images: [
       "/images/canon-dslr-front.jpg",
-      "/im=ages/canon-dslr-side.jpg"
+      "/images/canon-dslr-side.jpg"
     ],
     tags: ["camera", "Canon", "DSLR", "24MP", "4K"],
     featured: true,
@@ -384,7 +384,7 @@ let products = [
     stock: 45,
     rating: 4.4,
     totalReviews: 75,
-    image: "/reebok-sweatshirt.jpg",
+    image: "/images/reebok-sweatshirt.jpg",
     images: [
       "/reebok-sweatshirt-front.jpg",
       "/reebok-sweatshirt-back.jpg"
