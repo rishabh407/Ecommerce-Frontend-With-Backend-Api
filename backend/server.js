@@ -14,286 +14,6 @@ const __dirname = path.dirname(__filename);
 // Serve images folder
 app.use("/images", express.static(path.join(__dirname, "images")));
 
-// Sample product data
-// let products = [
-//   // Electronics
-//   {
-//     id: 1,
-//     name: "Apple iPhone 15",
-//     category: "electronics",
-//     brand: "Apple",
-//     price: 120000,
-//     image: "http://localhost:5000/images/iphone15.jpg",
-//     description: "Latest iPhone with A17 chip and 48MP camera.",
-//   },
-//   {
-//     id: 2,
-//     name: "Samsung Galaxy S23",
-//     category: "electronics",
-//     brand: "Samsung",
-//     price: 80000,
-//     image: "http://localhost:5000/images/galaxy-s23.jpg",
-//     description: "High performance smartphone with AMOLED display.",
-//   },
-//   {
-//     id: 3,
-//     name: "Sony Headphones",
-//     category: "electronics",
-//     brand: "Sony",
-//     price: 5000,
-//     image: "http://localhost:5000/images/sony-headphones.jpg",
-//     description: "Noise cancelling over-ear headphones with deep bass.",
-//   },
-//   {
-//     id: 4,
-//     name: "Apple MacBook Pro",
-//     category: "electronics",
-//     brand: "Apple",
-//     price: 200000,
-//     image: "http://localhost:5000/images/macbook-pro.jpg",
-//     description: "Powerful laptop with M2 chip and retina display.",
-//   },
-//   {
-//     id: 5,
-//     name: "Samsung Smart TV",
-//     category: "electronics",
-//     brand: "Samsung",
-//     price: 75000,
-//     image: "http://localhost:5000/images/samsung-tv.jpg",
-//     description: "55-inch 4K UHD smart TV with HDR support.",
-//   },
-//   {
-//     id: 6,
-//     name: "Logitech Mouse",
-//     category: "electronics",
-//     brand: "Logitech",
-//     price: 1500,
-//     image: "http://localhost:5000/images/logitech-mouse.jpg",
-//     description: "Wireless ergonomic mouse with high precision.",
-//   },
-//   {
-//     id: 7,
-//     name: "Canon DSLR Camera",
-//     category: "electronics",
-//     brand: "Canon",
-//     price: 55000,
-//     image: "http://localhost:5000/images/canon-dslr.jpg",
-//     description: "DSLR camera with 24MP sensor and 4K video recording.",
-//   },
-
-//   // Clothes
-//   {
-//     id: 8,
-//     name: "Nike T-Shirt",
-//     category: "clothes",
-//     brand: "Nike",
-//     price: 1200,
-//     image: "http://localhost:5000/images/nike-tshirt.jpg",
-//     description: "Comfortable cotton t-shirt for everyday wear.",
-//   },
-//   {
-//     id: 9,
-//     name: "Adidas Hoodie",
-//     category: "clothes",
-//     brand: "Adidas",
-//     price: 2500,
-//     image: "http://localhost:5000/images/adidas-hoodie.jpg",
-//     description: "Warm hoodie with soft inner lining.",
-//   },
-//   {
-//     id: 10,
-//     name: "Levi's Jeans",
-//     category: "clothes",
-//     brand: "Levi's",
-//     price: 1800,
-//     image: "http://localhost:5000/images/levis-jeans.jpg",
-//     description: "Classic slim fit denim jeans.",
-//   },
-//   {
-//     id: 11,
-//     name: "Puma Shorts",
-//     category: "clothes",
-//     brand: "Puma",
-//     price: 900,
-//     image: "http://localhost:5000/images/puma-shorts.jpg",
-//     description: "Lightweight sports shorts for running and gym.",
-//   },
-//   {
-//     id: 12,
-//     name: "Zara Dress",
-//     category: "clothes",
-//     brand: "Zara",
-//     price: 3500,
-//     image: "http://localhost:5000/images/zara-dress.jpg",
-//     description: "Stylish cotton dress for casual outings.",
-//   },
-//   {
-//     id: 13,
-//     name: "Reebok Sweatshirt",
-//     category: "clothes",
-//     brand: "Reebok",
-//     price: 2200,
-//     image: "http://localhost:5000/images/reebok-sweatshirt.jpg",
-//     description: "Cozy sweatshirt for cold days.",
-//   },
-//   {
-//     id: 14,
-//     name: "H&M Jacket",
-//     category: "clothes",
-//     brand: "H&M",
-//     price: 2800,
-//     image: "http://localhost:5000/images/hm-jacket.jpg",
-//     description: "Fashionable jacket suitable for winter.",
-//   },
-
-//   // Shoes
-//   {
-//     id: 15,
-//     name: "Nike Air Max",
-//     category: "shoes",
-//     brand: "Nike",
-//     price: 5000,
-//     image: "http://localhost:5000/images/nike-airmax.jpg",
-//     description: "Comfortable running shoes with cushioned soles.",
-//   },
-//   {
-//     id: 16,
-//     name: "Adidas Ultraboost",
-//     category: "shoes",
-//     brand: "Adidas",
-//     price: 6000,
-//     image: "http://localhost:5000/images/adidas-ultraboost.jpg",
-//     description: "High-performance sports shoes with boost technology.",
-//   },
-//   {
-//     id: 17,
-//     name: "Puma Sneakers",
-//     category: "shoes",
-//     brand: "Puma",
-//     price: 3500,
-//     image: "http://localhost:5000/images/puma-sneakers.jpg",
-//     description: "Casual sneakers for everyday wear.",
-//   },
-//   {
-//     id: 18,
-//     name: "Reebok Classic",
-//     category: "shoes",
-//     brand: "Reebok",
-//     price: 4000,
-//     image: "http://localhost:5000/images/reebok-classic.jpg",
-//     description: "Classic retro sneakers with great comfort.",
-//   },
-//   {
-//     id: 19,
-//     name: "Converse All Star",
-//     category: "shoes",
-//     brand: "Converse",
-//     price: 3000,
-//     image: "http://localhost:5000/images/converse-allstar.jpg",
-//     description: "Timeless high-top sneakers for all occasions.",
-//   },
-//   {
-//     id: 20,
-//     name: "Woodland Boots",
-//     category: "shoes",
-//     brand: "Woodland",
-//     price: 4500,
-//     image: "http://localhost:5000/images/woodland-boots.jpg",
-//     description: "Durable boots for outdoor activities.",
-//   },
-//   {
-//     id: 21,
-//     name: "Skechers Running Shoes",
-//     category: "shoes",
-//     brand: "Skechers",
-//     price: 3800,
-//     image: "http://localhost:5000/images/skechers-running.jpg",
-//     description: "Lightweight shoes designed for runners.",
-//   },
-
-//   // Furniture
-//   {
-//     id: 22,
-//     name: "Ikea Chair",
-//     category: "furniture",
-//     brand: "Ikea",
-//     price: 2500,
-//     image: "http://localhost:5000/images/ikea-chair.jpg",
-//     description: "Simple and comfortable wooden chair.",
-//   },
-//   {
-//     id: 23,
-//     name: "Wooden Dining Table",
-//     category: "furniture",
-//     brand: "HomeTown",
-//     price: 12000,
-//     image: "http://localhost:5000/images/dining-table.jpg",
-//     description: "Spacious dining table for family meals.",
-//   },
-//   {
-//     id: 24,
-//     name: "Leather Sofa",
-//     category: "furniture",
-//     brand: "Nilkamal",
-//     price: 35000,
-//     image: "http://localhost:5000/images/leather-sofa.jpg",
-//     description: "Premium leather sofa for living room.",
-//   },
-//   {
-//     id: 25,
-//     name: "King Size Bed",
-//     category: "furniture",
-//     brand: "Wakefit",
-//     price: 40000,
-//     image: "http://localhost:5000/images/king-bed.jpg",
-//     description: "Comfortable king size bed with mattress.",
-//   },
-//   {
-//     id: 26,
-//     name: "Bookshelf",
-//     category: "furniture",
-//     brand: "Ikea",
-//     price: 8000,
-//     image: "http://localhost:5000/images/bookshelf.jpg",
-//     description: "Wooden bookshelf with multiple shelves.",
-//   },
-//   {
-//     id: 27,
-//     name: "Office Chair",
-//     category: "furniture",
-//     brand: "Godrej",
-//     price: 6000,
-//     image: "http://localhost:5000/images/office-chair.jpg",
-//     description: "Ergonomic office chair with adjustable height.",
-//   },
-//   {
-//     id: 28,
-//     name: "Coffee Table",
-//     category: "furniture",
-//     brand: "HomeTown",
-//     price: 4500,
-//     image: "http://localhost:5000/images/coffee-table.jpg",
-//     description: "Stylish coffee table for living area.",
-//   },
-//   {
-//     id: 29,
-//     name: "TV Stand",
-//     category: "furniture",
-//     brand: "Nilkamal",
-//     price: 7000,
-//     image: "http://localhost:5000/images/tv-stand.jpg",
-//     description: "Modern TV stand with storage space.",
-//   },
-//   {
-//     id: 30,
-//     name: "Wardrobe",
-//     category: "furniture",
-//     brand: "Godrej",
-//     price: 25000,
-//     image: "http://localhost:5000/images/wardrobe.jpg",
-//     description: "Spacious wardrobe with multiple compartments.",
-//   },
-// ];
 let products = [
   // Electronics
   {
@@ -310,11 +30,11 @@ let products = [
     stock: 25,
     rating: 4.8,
     totalReviews: 350,
-    image: "http://localhost:5000/images/iphone15.jpg",
+    image: "/images/iphone15.jpg",
     images: [
-      "http://localhost:5000/images/iphone15-front.jpg",
-      "http://localhost:5000/images/iphone15-back.jpg",
-      "http://localhost:5000/images/iphone15-side.jpg"
+      "/images/iphone15-front.jpg",
+      "/images/iphone15-back.jpg",
+      "/images/iphone15-side.jpg"
     ],
     tags: ["smartphone", "5G", "Apple", "iPhone", "new launch"],
     featured: true,
@@ -340,10 +60,10 @@ let products = [
     stock: 30,
     rating: 4.6,
     totalReviews: 290,
-    image: "http://localhost:5000/images/galaxy-s23.jpg",
+    image: "/images/galaxy-s23.jpg",
     images: [
-      "http://localhost:5000/images/galaxy-s23-front.jpg",
-      "http://localhost:5000/images/galaxy-s23-back.jpg"
+      "/images/galaxy-s23-front.jpg",
+      "/images/galaxy-s23-back.jpg"
     ],
     tags: ["smartphone", "Samsung", "AMOLED", "5G"],
     featured: true,
@@ -369,10 +89,10 @@ let products = [
     stock: 40,
     rating: 4.5,
     totalReviews: 180,
-    image: "http://localhost:5000/images/sony-headphones.jpg",
+    image: "/images/sony-headphones.jpg",
     images: [
-      "http://localhost:5000/images/sony-headphones-front.jpg",
-      "http://localhost:5000/images/sony-headphones-side.jpg"
+      "/images/sony-headphones-front.jpg",
+      "/images/sony-headphones-side.jpg"
     ],
     tags: ["headphones", "Sony", "audio", "noise cancelling"],
     featured: false,
@@ -398,10 +118,10 @@ let products = [
     stock: 15,
     rating: 4.9,
     totalReviews: 420,
-    image: "http://localhost:5000/images/macbook-pro.jpg",
+    image: "/images/macbook-pro.jpg",
     images: [
-      "http://localhost:5000/images/macbook-pro-front.jpg",
-      "http://localhost:5000/images/macbook-pro-side.jpg"
+      "/images/macbook-pro-front.jpg",
+      "/images/macbook-pro-side.jpg"
     ],
     tags: ["laptop", "Apple", "M2 Chip", "retina display"],
     featured: true,
@@ -427,10 +147,10 @@ let products = [
     stock: 20,
     rating: 4.7,
     totalReviews: 200,
-    image: "http://localhost:5000/images/samsung-tv.jpg",
+    image: "/images/samsung-tv.jpg",
     images: [
-      "http://localhost:5000/images/samsung-tv-front.jpg",
-      "http://localhost:5000/images/samsung-tv-side.jpg"
+      "/images/samsung-tv-front.jpg",
+      "/images/samsung-tv-side.jpg"
     ],
     tags: ["TV", "Samsung", "Smart TV", "4K UHD", "HDR"],
     featured: true,
@@ -456,10 +176,10 @@ let products = [
     stock: 50,
     rating: 4.4,
     totalReviews: 100,
-    image: "http://localhost:5000/images/logitech-mouse.jpg",
+    image: "/images/logitech-mouse.jpg",
     images: [
-      "http://localhost:5000/images/logitech-mouse-top.jpg",
-      "http://localhost:5000/images/logitech-mouse-side.jpg"
+      "/images/logitech-mouse-top.jpg",
+      "/images/logitech-mouse-side.jpg"
     ],
     tags: ["mouse", "Logitech", "wireless", "ergonomic"],
     featured: false,
@@ -485,10 +205,10 @@ let products = [
     stock: 18,
     rating: 4.6,
     totalReviews: 150,
-    image: "http://localhost:5000/images/canon-dslr.jpg",
+    image: "/images/canon-dslr.jpg",
     images: [
-      "http://localhost:5000/images/canon-dslr-front.jpg",
-      "http://localhost:5000/images/canon-dslr-side.jpg"
+      "/images/canon-dslr-front.jpg",
+      "/im=ages/canon-dslr-side.jpg"
     ],
     tags: ["camera", "Canon", "DSLR", "24MP", "4K"],
     featured: true,
@@ -516,10 +236,10 @@ let products = [
     stock: 40,
     rating: 4.5,
     totalReviews: 120,
-    image: "http://localhost:5000/images/nike-tshirt.jpg",
+    image: "/images/nike-tshirt.jpg",
     images: [
-      "http://localhost:5000/images/nike-tshirt-front.jpg",
-      "http://localhost:5000/images/nike-tshirt-back.jpg"
+      "/images/nike-tshirt-front.jpg",
+      "/images/nike-tshirt-back.jpg"
     ],
     tags: ["t-shirt", "Nike", "cotton", "casual"],
     featured: false,
@@ -546,10 +266,10 @@ let products = [
     stock: 35,
     rating: 4.6,
     totalReviews: 90,
-    image: "http://localhost:5000/images/adidas-hoodie.jpg",
+    image: "/images/adidas-hoodie.jpg",
     images: [
-      "http://localhost:5000/images/adidas-hoodie-front.jpg",
-      "http://localhost:5000/images/adidas-hoodie-back.jpg"
+      "/images/adidas-hoodie-front.jpg",
+      "/images/adidas-hoodie-back.jpg"
     ],
     tags: ["hoodie", "Adidas", "warm", "casual"],
     featured: true,
@@ -576,10 +296,10 @@ let products = [
     stock: 50,
     rating: 4.4,
     totalReviews: 80,
-    image: "http://localhost:5000/images/levis-jeans.jpg",
+    image: "/images/levis-jeans.jpg",
     images: [
-     "http://localhost:5000/images/levis-jeans-front.jpg",
-      "http://localhost:5000/images/levis-jeans-back.jpg"
+     "/images/levis-jeans-front.jpg",
+      "/images/levis-jeans-back.jpg"
     ],
     tags: ["jeans", "Levi's", "denim", "slim fit"],
     featured: false,
@@ -606,10 +326,10 @@ let products = [
     stock: 60,
     rating: 4.3,
     totalReviews: 50,
-    image: "http://localhost:5000/images/puma-shorts.jpg",
+    image: "/images/puma-shorts.jpg",
     images: [
-      "http://localhost:5000/images/puma-shorts-front.jpg",
-      "http://localhost:5000/images/puma-shorts-back.jpg"
+      "/images/puma-shorts-front.jpg",
+      "/images/puma-shorts-back.jpg"
     ],
     tags: ["shorts", "Puma", "sports", "gym"],
     featured: false,
@@ -635,10 +355,10 @@ let products = [
     stock: 25,
     rating: 4.5,
     totalReviews: 95,
-    image: "http://localhost:5000/images/zara-dress.jpg",
+    image: "/images/zara-dress.jpg",
     images: [
-      "http://localhost:5000/images/zara-dress-front.jpg",
-      "http://localhost:5000/images/zara-dress-back.jpg"
+      "/images/zara-dress-front.jpg",
+      "/images/zara-dress-back.jpg"
     ],
     tags: ["dress", "Zara", "cotton", "fashion"],
     featured: true,
@@ -664,10 +384,10 @@ let products = [
     stock: 45,
     rating: 4.4,
     totalReviews: 75,
-    image: "http://localhost:5000/images/reebok-sweatshirt.jpg",
+    image: "/reebok-sweatshirt.jpg",
     images: [
-      "http://localhost:5000/images/reebok-sweatshirt-front.jpg",
-      "http://localhost:5000/images/reebok-sweatshirt-back.jpg"
+      "/reebok-sweatshirt-front.jpg",
+      "/reebok-sweatshirt-back.jpg"
     ],
     tags: ["sweatshirt", "Reebok", "winter", "fashion"],
     featured: false,
@@ -693,10 +413,10 @@ let products = [
     stock: 30,
     rating: 4.6,
     totalReviews: 110,
-    image: "http://localhost:5000/images/hm-jacket.jpg",
+    image: "/images/hm-jacket.jpg",
     images: [
-      "http://localhost:5000/images/hm-jacket-front.jpg",
-      "http://localhost:5000/images/hm-jacket-back.jpg"
+      "/images/hm-jacket-front.jpg",
+      "/images/hm-jacket-back.jpg"
     ],
     tags: ["jacket", "H&M", "winter", "fashion"],
     featured: true,
@@ -724,10 +444,10 @@ let products = [
     stock: 25,
     rating: 4.7,
     totalReviews: 200,
-    image: "http://localhost:5000/images/nike-airmax.jpg",
+    image: "/images/nike-airmax.jpg",
     images: [
-      "http://localhost:5000/images/nike-airmax-side.jpg",
-      "http://localhost:5000/images/nike-airmax-top.jpg"
+      "/images/nike-airmax-side.jpg",
+      "/images/nike-airmax-top.jpg"
     ],
     tags: ["shoes", "Nike", "running", "sports"],
     featured: true,
@@ -753,10 +473,10 @@ let products = [
     stock: 30,
     rating: 4.8,
     totalReviews: 240,
-    image: "http://localhost:5000/images/adidas-ultraboost.jpg",
+    image: "/images/adidas-ultraboost.jpg",
     images: [
-      "http://localhost:5000/images/adidas-ultraboost-side.jpg",
-      "http://localhost:5000/images/adidas-ultraboost-top.jpg"
+      "/images/adidas-ultraboost-side.jpg",
+      "/images/adidas-ultraboost-top.jpg"
     ],
     tags: ["shoes", "Adidas", "running", "boost"],
     featured: true,
@@ -782,10 +502,10 @@ let products = [
     stock: 40,
     rating: 4.5,
     totalReviews: 160,
-    image: "http://localhost:5000/images/puma-sneakers.jpg",
+    image: "/images/puma-sneakers.jpg",
     images: [
-      "http://localhost:5000/images/puma-sneakers-side.jpg",
-      "http://localhost:5000/images/puma-sneakers-top.jpg"
+      "/images/puma-sneakers-side.jpg",
+      "/images/puma-sneakers-top.jpg"
     ],
     tags: ["sneakers", "Puma", "casual", "fashion"],
     featured: false,
@@ -811,10 +531,10 @@ let products = [
     stock: 35,
     rating: 4.4,
     totalReviews: 130,
-    image: "http://localhost:5000/images/reebok-classic.jpg",
+    image: "/images/reebok-classic.jpg",
     images: [
-      "http://localhost:5000/images/reebok-classic-side.jpg",
-      "http://localhost:5000/images/reebok-classic-top.jpg"
+      "/images/reebok-classic-side.jpg",
+      "/images/reebok-classic-top.jpg"
     ],
     tags: ["sneakers", "Reebok", "classic", "fashion"],
     featured: false,
@@ -840,10 +560,10 @@ let products = [
     stock: 45,
     rating: 4.6,
     totalReviews: 210,
-    image: "http://localhost:5000/images/converse-allstar.jpg",
+    image: "/images/converse-allstar.jpg",
     images: [
-      "http://localhost:5000/images/converse-allstar-side.jpg",
-      "http://localhost:5000/images/converse-allstar-top.jpg"
+      "/images/converse-allstar-side.jpg",
+      "/images/converse-allstar-top.jpg"
     ],
     tags: ["sneakers", "Converse", "high-top", "fashion"],
     featured: true,
@@ -869,10 +589,10 @@ let products = [
     stock: 20,
     rating: 4.7,
     totalReviews: 140,
-    image: "http://localhost:5000/images/woodland-boots.jpg",
+    image: "/images/woodland-boots.jpg",
     images: [
-      "http://localhost:5000/images/woodland-boots-side.jpg",
-      "http://localhost:5000/images/woodland-boots-top.jpg"
+      "/images/woodland-boots-side.jpg",
+      "/images/woodland-boots-top.jpg"
     ],
     tags: ["boots", "Woodland", "outdoor", "durable"],
     featured: true,
@@ -898,10 +618,10 @@ let products = [
     stock: 28,
     rating: 4.6,
     totalReviews: 175,
-    image: "http://localhost:5000/images/skechers-running.jpg",
+    image: "/images/skechers-running.jpg",
     images: [
-      "http://localhost:5000/images/skechers-running-side.jpg",
-      "http://localhost:5000/images/skechers-running-top.jpg"
+      "/images/skechers-running-side.jpg",
+      "/images/skechers-running-top.jpg"
     ],
     tags: ["running", "Skechers", "lightweight", "sports"],
     featured: false,
@@ -929,10 +649,10 @@ let products = [
     stock: 35,
     rating: 4.4,
     totalReviews: 80,
-    image: "http://localhost:5000/images/ikea-chair.jpg",
+    image: "/images/ikea-chair.jpg",
     images: [
-      "http://localhost:5000/images/ikea-chair-front.jpg",
-      "http://localhost:5000/images/ikea-chair-side.jpg"
+      "/images/ikea-chair-front.jpg",
+      "/images/ikea-chair-side.jpg"
     ],
     tags: ["chair", "Ikea", "wooden", "furniture"],
     featured: false,
@@ -958,10 +678,10 @@ let products = [
     stock: 20,
     rating: 4.5,
     totalReviews: 95,
-    image: "http://localhost:5000/images/dining-table.jpg",
+    image: "/images/dining-table.jpg",
     images: [
-      "http://localhost:5000/images/dining-table-top.jpg",
-      "http://localhost:5000/images/dining-table-side.jpg"
+      "/images/dining-table-top.jpg",
+      "/images/dining-table-side.jpg"
     ],
     tags: ["dining", "table", "wooden", "HomeTown"],
     featured: true,
@@ -987,10 +707,10 @@ let products = [
     stock: 15,
     rating: 4.7,
     totalReviews: 120,
-    image: "http://localhost:5000/images/leather-sofa.jpg",
+    image: "/images/leather-sofa.jpg",
     images: [
-      "http://localhost:5000/images/leather-sofa-front.jpg",
-      "http://localhost:5000/images/leather-sofa-side.jpg"
+      "/images/leather-sofa-front.jpg",
+      "/images/leather-sofa-side.jpg"
     ],
     tags: ["sofa", "Nilkamal", "leather", "furniture"],
     featured: true,
@@ -1016,10 +736,10 @@ let products = [
     stock: 10,
     rating: 4.8,
     totalReviews:140,
-    image: "http://localhost:5000/images/king-bed.jpg",
+    image: "/images/king-bed.jpg",
     images: [
-      "http://localhost:5000/images/king-bed-top.jpg",
-      "http://localhost:5000/images/king-bed-side.jpg"
+      "/images/king-bed-top.jpg",
+      "/images/king-bed-side.jpg"
     ],
     tags: ["bed", "Wakefit", "king", "mattress"],
     featured: true,
@@ -1045,10 +765,10 @@ let products = [
     stock: 22,
     rating: 4.5,
     totalReviews: 85,
-    image: "http://localhost:5000/images/bookshelf.jpg",
+    image: "/images/bookshelf.jpg",
     images: [
-      "http://localhost:5000/images/bookshelf-front.jpg",
-      "http://localhost:5000/images/bookshelf-side.jpg"
+      "/images/bookshelf-front.jpg",
+      "/images/bookshelf-side.jpg"
     ],
     tags: ["bookshelf", "Ikea", "wooden", "storage"],
     featured: false,
@@ -1074,10 +794,10 @@ let products = [
     stock: 28,
     rating: 4.6,
     totalReviews: 100,
-    image:"http://localhost:5000/images/office-chair.jpg",
+    image:"/images/office-chair.jpg",
     images: [
-      "http://localhost:5000/images/office-chair-front.jpg",
-      "http://localhost:5000/images/office-chair-side.jpg"
+      "/images/office-chair-front.jpg",
+      "/images/office-chair-side.jpg"
     ],
     tags: ["office", "chair", "Godrej", "ergonomic"],
     featured: true,
@@ -1103,10 +823,10 @@ let products = [
     stock: 40,
     rating: 4.5,
     totalReviews: 90,
-    image: "http://localhost:5000/images/coffee-table.jpg",
+    image: "/images/coffee-table.jpg",
     images: [
-      "http://localhost:5000/images/coffee-table-top.jpg",
-      "http://localhost:5000/images/coffee-table-side.jpg"
+      "/images/coffee-table-top.jpg",
+      "/images/coffee-table-side.jpg"
     ],
     tags: ["coffee", "table", "HomeTown", "furniture"],
     featured: false,
@@ -1132,10 +852,10 @@ let products = [
     stock: 25,
     rating: 4.4,
     totalReviews: 70,
-    image: "http://localhost:5000/images/tv-stand.jpg",
+    image: "/images/tv-stand.jpg",
     images: [
-      "http://localhost:5000/images/tv-stand-front.jpg",
-      "http://localhost:5000/images/tv-stand-side.jpg"
+      "/images/tv-stand-front.jpg",
+      "/images/tv-stand-side.jpg"
     ],
     tags: ["tv stand", "Nilkamal", "storage", "furniture"],
     featured: false,
@@ -1161,10 +881,10 @@ let products = [
     stock: 12,
     rating: 4.7,
     totalReviews: 130,
-    image: "http://localhost:5000/images/wardrobe.jpg",
+    image: "/images/wardrobe.jpg",
     images: [
-      "http://localhost:5000/images/wardrobe-front.jpg",
-      "http://localhost:5000/images/wardrobe-inside.jpg"
+      "/images/wardrobe-front.jpg",
+      "/images/wardrobe-inside.jpg"
     ],
     tags: ["wardrobe", "Godrej", "storage", "furniture"],
     featured: true,
@@ -1206,73 +926,16 @@ app.get("/api/products/category/:category",(req,res)=>{
   if(product.length>0){
     res.json(product);
   }else{
-    res.json.status(404).json({message:"Category Not Found"});
+    res.status(404).json({message:"Category Not Found"});
   }
 });
-
-// We have to provide a different route not like the id so that express distinguish between different routes.
-
-// 1)/api/products/:id
-// 2)/api/products/:category
-
-// Express not understand which one to call but by default express runs id part because it writes before category part .
-
-// Products By Category
-// app.get("/api/products/:category",(req,res)=>{
-//   const category=req.params.category.toLowerCase();
-//   const product=products.filter((p)=>p.category.toLowerCase()===category);
-//   if(product.length>0){
-//     res.json(product);
-//   }else{
-//     res.json.status(404).json({message:"Category Not Found"});
-//   }
-// })
-// 
-
-// // Get - Add a new user Send Data from Frontend to backend
-// app.post("/api/products",(req,res)=>{
-//       const newuser=req.body;
-//       newuser.id=products.length+1;
-//       products.push(newuser);
-//       res.json({message:"User added!",user:newuser});
-// });
-
-// // Delete = For Deleting A Particular Item Form Their Id.
-
-// app.delete("/api/products/:id",(req,res)=>{
-//         const id=parseInt(req.params.id);
-//         const exists=products.find(p=>p.id===id);
-//         if(exists) 
-//           {
-//            products=products.filter(p=>p.id!==id);
-//            res.json({message:"Product Deleted !",products});
-//           }
-//           else{
-//             return res.status(404).json({message:"Product Not Found"});
-//           }
-// });
-
-// //  For updating a data of a particular brand
-
-// app.put("/api/products/:id",(req,res)=>{
-//   const id=parseInt(req.params.id);
-//   const item=req.body; // the data which we want to updated stored in a particular variable.
-//   let product=products.find(p=>p.id===id); // product details stored here.
-//   // If product is not finding 
-//   if(!product)
-//   {
-//     return res.status(404).json({message:"Product Not Found"});
-//   }
-//   product={...product,...item}; // here the updated data which is stored in item should overwrite the products details.
-//   products=products.map(p=>p.id===id?product:p); // Final Step Where we are updating the final array.
-// })
 
 // ✅ 3. Root route (optional)
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT ||5000;
 app.listen(PORT, () =>
   console.log(`✅ Server running on http://localhost:${PORT}`)
 );
