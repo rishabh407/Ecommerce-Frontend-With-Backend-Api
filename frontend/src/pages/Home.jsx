@@ -9,9 +9,10 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../ReduxStore/cartSlice";
 import { toast } from "react-toastify";
 import useProducts from "../hooks/useProducts";
+import { getImageURL } from "../hooks/utils";
 
 const Home = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme,baseURL } = useContext(ThemeContext);
   const dispatch = useDispatch();
 
   const categories = [
@@ -32,7 +33,7 @@ const Home = () => {
     dispatch(addToCart(item));
     toast.success(`${item.name} added to cart!`);
   };
-
+     console.log(products[0].image);
   return (
     <>
       {/* --------------------- Hero Section ---------------------- */}
@@ -136,7 +137,7 @@ const Home = () => {
                   {/* 🖼️ Product Image */}
                   <div className="relative overflow-hidden rounded-xl mb-4">
                     <img
-                      src={product.image}
+                      src={getImageURL(product.image)}
                       alt={product.title}
                       className="h-48 w-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
                     />

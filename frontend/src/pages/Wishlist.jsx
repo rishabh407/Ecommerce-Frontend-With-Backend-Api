@@ -5,6 +5,7 @@ import { ThemeContext } from "../Context/ThemeContext";
 import { addToCart } from "../ReduxStore/cartSlice";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { getImageURL } from "../hooks/utils";
 
 const Wishlist = () => {
   const wishlistItems = useSelector((state) => state.wishlist.items);
@@ -91,7 +92,7 @@ const Wishlist = () => {
                 {/* 🖼️ Product Image */}
                 <div className="w-full flex justify-center mb-4">
                   <img
-                    src={product.image}
+                    src={getImageURL(product.image)}
                     alt={product.name}
                     onError={(e) => (e.target.src = "/Images/placeholder.jpg")}
                     className="w-44 h-44 object-contain rounded-lg transition-transform duration-300 hover:scale-105"

@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import useProducts from "../hooks/useProducts";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaHeart, FaStar } from "react-icons/fa";
+import { getImageURL } from "../hooks/utils";
 
 const ProductDetails = () => {
   const { theme } = useContext(ThemeContext);
@@ -94,7 +95,7 @@ const ProductDetails = () => {
           <div className="flex flex-col items-center">
             <div className="w-full">
               <img
-                src={activeImage}
+                src={getImageURL(activeImage)}
                 alt={singleProduct.title}
                 className="rounded-xl object-cover w-full h-96 md:h-[500px] shadow-lg transition-all duration-500"
               />
@@ -104,7 +105,7 @@ const ProductDetails = () => {
               {allImages.map((img, index) => (
                 <img
                   key={index}
-                  src={img}
+                  src={getImageURL(img)}
                   alt={`thumb-${index}`}
                   className={`w-20 h-20 object-cover rounded-lg border-2 cursor-pointer transition-all duration-300 ${
                     activeImage === img
@@ -287,7 +288,7 @@ const ProductDetails = () => {
           {/* Product Image */}
           <div className="relative overflow-hidden">
             <img
-              src={item.image}
+              src={getImageURL(item.image)}
               alt={item.title}
               className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-110"
             />

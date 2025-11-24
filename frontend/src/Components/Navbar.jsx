@@ -107,7 +107,6 @@ const Navbar = () => {
             )}
           </NavLink>
 
-          {/* PROFILE */}
           <NavLink
             to="/checkout"
             className={`flex items-center gap-1 ${
@@ -190,7 +189,7 @@ const Navbar = () => {
 />
 
               
-              {["Home", "Products","Cart","WishList"].map((item, i) => (
+              {["Home", "Products",,"Checkout","Cart","WishList"].map((item, i) => (
                 <NavLink
                   key={i}
                   to={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}

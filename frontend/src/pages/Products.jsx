@@ -7,6 +7,7 @@ import useProducts from "../hooks/useProducts";
 import { ContextContent } from "../Context/SearchContext";
 import { addToCart } from "../ReduxStore/cartSlice";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { getImageURL } from "../hooks/utils";
 
 const Products = () => {
   const { theme } = useContext(ThemeContext);
@@ -162,14 +163,14 @@ const Products = () => {
                   {/* 🖼️ Product Image (hover swap) */}
                   <div className="relative overflow-hidden rounded-xl">
                     <img
-                      src={product.image}
+                      src={getImageURL(product.image)}
                       alt={product.title}
                       className="h-48 w-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
                       onError={(e) => (e.target.src = "/Images/placeholder.jpg")}
                     />
                     {product.images && product.images.length > 1 && (
                       <img
-                        src={product.images[1]}
+                        src={getImageURL(product.images[1])}
                         alt={`${product.title} hover`}
                         className="h-48 w-full object-cover rounded-xl absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-500"
                       />

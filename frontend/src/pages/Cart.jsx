@@ -5,6 +5,7 @@ import { ThemeContext } from "../Context/ThemeContext";
 import { useNavigate } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaTrashAlt } from "react-icons/fa";
+import { getImageURL } from "../hooks/utils";
 
 const Cart = () => {
   const { items, total } = useSelector((state) => state.cart);
@@ -54,7 +55,7 @@ const Cart = () => {
                     {/* Product Info */}
                     <div className="flex items-center gap-4 w-full sm:w-3/4">
                       <img
-                        src={item.image}
+                        src={getImageURL(item.image)}
                         alt={item.name}
                         className="w-24 h-24 object-cover rounded-xl shadow-md hover:scale-105 transition-transform"
                       />

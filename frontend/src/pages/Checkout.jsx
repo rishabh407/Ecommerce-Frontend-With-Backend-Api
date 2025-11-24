@@ -5,6 +5,7 @@ import { clearCart } from "../ReduxStore/cartSlice";
 import { toast, ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
+import { getImageURL } from "../hooks/utils";
 
 const Checkout = () => {
   const { theme } = useContext(ThemeContext);
@@ -296,7 +297,7 @@ const Checkout = () => {
           >
             <div className="flex items-center gap-3">
               <img
-                src={item.image}
+                src={getImageURL(item.image)}
                 alt={item.name}
                 onError={(e) => (e.target.src = "/Images/placeholder.jpg")}
                 className="w-14 h-14 object-cover rounded-lg shadow"
