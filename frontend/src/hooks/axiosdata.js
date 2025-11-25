@@ -1,6 +1,6 @@
 // Store global data and fetch it in website anywhere we want.
 import axios from "axios";
-import api from '../api/axiosInstance';
+import api from "../api/axiosinstance";
 
 export const getProducts=async()=>{
     const res=await api.get("/products");
