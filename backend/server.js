@@ -4,8 +4,12 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const app = express();
-app.use(cors()); // allows frontend to talk to backedn (importatn for Axios)
+// app.use(cors()); // allows frontend to talk to backedn (importatn for Axios)
 
+app.use(cors({
+  origin: ["https://ecommerce-frontend-with-backend-api.vercel.app"], // your frontend URL
+  credentials: true
+}));
 app.use(express.json());
 // Create __dirname in ES module
 const __filename = fileURLToPath(import.meta.url);
