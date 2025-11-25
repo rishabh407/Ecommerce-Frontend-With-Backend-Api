@@ -79,7 +79,7 @@ const Home = () => {
                   }`}
               ></div>
               <img
-                src="Images/Main.jpg"
+                src="/images/main.jpg"
                 alt="Hero"
                 className="relative w-full max-w-md md:max-w-lg rounded-3xl object-cover shadow-2xl border border-white/20"
               />

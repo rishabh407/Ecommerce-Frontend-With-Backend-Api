@@ -104,7 +104,7 @@ const Checkout = () => {
           }`}
         >
           <img
-            src="/Images/success.gif"
+            src="/images/success.gif"
             alt="Success"
             className="w-32 mx-auto mb-6"
           />
