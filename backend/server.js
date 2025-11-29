@@ -904,7 +904,11 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 //     updatedAt: "2025-11-01T10:00:00Z"
 //   }
 // ];
-const BASE_URL = process.env.BACKEND_URL || "http://localhost:5000";
+
+// const BASE_URL = process.env.BACKEND_URL || "http://localhost:5000";
+
+const BASE_URL =
+  process.env.RENDER_EXTERNAL_URL || "http://localhost:5000";
 
 let products = [
   // Electronics
